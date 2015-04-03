@@ -61,6 +61,11 @@ public class Apriori {
         }
     }
 
+    /**
+     * 输出置信度
+     *
+     * @param confSet
+     */
     static void printConfidenceItemSets(List<ItemSet> confSet) {
         System.out.println();
         System.out.println("Association Rules:");
