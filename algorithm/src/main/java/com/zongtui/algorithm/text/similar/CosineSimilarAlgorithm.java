@@ -5,6 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.zongtui.algorithm.text.tfidf.TfIdfAlgorithm;
+
 /**
  * 
  * <p>Title:</p>
@@ -108,8 +110,9 @@ public class CosineSimilarAlgorithm {
 	}
 	
 	public static void main(String[] args){
-		Double result=cosSimilarityByString("关于王立军，有几个基本事实。首先，1月28日我是初次听到此事，并不相信谷开来会杀人，我跟11·15杀人案无关，我不是谷开来11·15杀人罪的共犯，这个大家都认可",
-				"实际上免他是有这些原因的，绝不只是一个谷开来的原因。这是多因一果。");
+//		Double result=cosSimilarityByString("关于王立军，有几个基本事实。首先，1月28日我是初次听到此事，并不相信谷开来会杀人，我跟11·15杀人案无关，我不是谷开来11·15杀人罪的共犯，这个大家都认可",
+//				"实际上免他是有这些原因的，绝不只是一个谷开来的原因。这是多因一果。");
+		Double result=cosSimilarityByString("我喜欢看电视，不喜欢看电影。","我不喜欢看电视，也不喜欢看电影。");
 		System.out.println(result);
 	}
 }

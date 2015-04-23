@@ -93,6 +93,7 @@ public class TfIdfAlgorithm {
         } catch (FileNotFoundException e) {  
             e.printStackTrace();
         }  
+        System.out.println(" "+fileList.size());
         return fileList;  
     }
     
@@ -109,7 +110,7 @@ public class TfIdfAlgorithm {
      */
     private static String readFile(String file) throws FileNotFoundException, IOException {  
         StringBuffer sb = new StringBuffer();  
-        InputStreamReader is = new InputStreamReader(new FileInputStream(file), "UTF-8");  
+        InputStreamReader is = new InputStreamReader(new FileInputStream(file), "GBK");  
         BufferedReader br = new BufferedReader(is);  
         String line = br.readLine();  
         while (line != null) {  
@@ -373,7 +374,7 @@ public class TfIdfAlgorithm {
     	
     	System.out.println("tf--------------------------------------");
     	System.out.println("输出的分割符号 "+File.separator);
-    	Map<String, Map<String, Double>> allTfMap=TfIdfAlgorithm.allTf("D://TrainningSet//C000007//10.txt");
+    	Map<String, Map<String, Double>> allTfMap=TfIdfAlgorithm.allTf("D://TrainningSet//C000007//");
     	Set<String> fileList=allTfMap.keySet();
       	for(String filePath : fileList){
      		Map<String, Double> tfMap=allTfMap.get(filePath);
