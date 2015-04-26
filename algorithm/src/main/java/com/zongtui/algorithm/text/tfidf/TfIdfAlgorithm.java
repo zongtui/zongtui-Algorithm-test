@@ -374,7 +374,7 @@ public class TfIdfAlgorithm {
     	
     	System.out.println("tf--------------------------------------");
     	System.out.println("输出的分割符号 "+File.separator);
-    	Map<String, Map<String, Double>> allTfMap=TfIdfAlgorithm.allTf("D://TrainningSet//C000007//");
+    	Map<String, Map<String, Double>> allTfMap=TfIdfAlgorithm.allTf("D://data//C000007//");
     	Set<String> fileList=allTfMap.keySet();
       	for(String filePath : fileList){
      		Map<String, Double> tfMap=allTfMap.get(filePath);

@@ -19,8 +19,6 @@ package com.zongtui.algorithm.classifier.bayes;
  * @since JDK 1.7
  */
 
-import java.io.IOException;
-
 import jeasy.analysis.MMAnalyzer;
 
 public class ChineseSpliter {
@@ -42,7 +40,7 @@ public class ChineseSpliter {
 		MMAnalyzer analyzer = new MMAnalyzer();
 		try {
 			result = analyzer.segment(text, splitToken);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return result;
